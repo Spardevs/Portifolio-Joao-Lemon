@@ -217,11 +217,6 @@ p{
 
 @media  screen and (min-width: 1600px){
     
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> master
 }
 
 /*   CLASSES UTILITARIAS  */
@@ -262,9 +257,6 @@ p{
 .jl-bg-black {
    background-color: #000;
 }
-
-<<<<<<< HEAD
-=======
 .jl-mar-15 {
     margin: 15px;
 }
@@ -296,9 +288,6 @@ p{
 .jl-pad-left-15 {
     padding-left: 15px;
 }
-
-
->>>>>>> master
 /* CLASSES COMPORTAMENTO */
 
 .jl-is-open{
@@ -307,12 +296,8 @@ p{
 
 .jl-change-icon{
     background-position-y: -45px;
-<<<<<<< HEAD
-=======
 }
 
 .jl-fade-out{
     animation: fadeOut 2s forwards ease-out;
->>>>>>> Stashed changes
->>>>>>> master
 }
