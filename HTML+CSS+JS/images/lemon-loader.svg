@@ -5,7 +5,7 @@
 	>
 <style type="text/css">
 	@keyframes lineGrow {
-		to {
+		to{
 			stroke-dashoffset: 0;
 		}
 	}

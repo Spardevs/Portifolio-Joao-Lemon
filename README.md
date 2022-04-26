@@ -5,4 +5,4 @@
  Bootstrap 5.1.3
  Waypoints 4.0.1
  Ionicons 5.5.2
-
+Animejs v3.2.1
