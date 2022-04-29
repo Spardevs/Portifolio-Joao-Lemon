@@ -459,13 +459,15 @@ p, label {
         width: calc(100% - 30px);
         background-color: #2C2C2C;
         display: table;
-        padding: 75px;
+        padding: 75px 0;
     }
 
     .jl-portifolio-item-thumb img {
         width: 100%;
         max-width: 100%;
         height: auto;
+        position: relative;
+        left: -75px;
     }
     
 
