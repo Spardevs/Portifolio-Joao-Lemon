@@ -13,6 +13,7 @@ var currentSlide = document.querySelector('.jl-current-slide');
 var totalSlide = document.querySelector('.jl-total-slide');
 var currentCounter = 1;
 var navItems = document.querySelectorAll('.jl-item-navigator a')
+var navCounter = document.querySelector('.jl-navigator-counter span');
 
 //Capturando larguras individuais
 var containerWidth = sliderContainer.parentElement.offsetWidth;
@@ -77,6 +78,7 @@ var counterAdd = function(){
     if((currentCounter >=0 ) && (currentCounter < sliderTotalItems)){
         currentCounter++;
         currentSlide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
 }
 
@@ -86,6 +88,7 @@ var counterRemove = function(){
     if((currentCounter > 1 ) && (currentCounter <= sliderTotalItems)){
         currentCounter--;
         currentSlide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
 }
 
@@ -96,7 +99,12 @@ var setActiveNav = function(){
     for(var nv = 0; nv < navItems.length; nv++){
         let myNavNum = parseInt(navItems[nv].getAttribute('data-nav'));
         if(myNavNum === currentCounter){
-            navItems[nv].classList.add('jl-item-active');
+            navItems[nv].classList.add('jl-item-active')
+
+            anime({
+                targets: '.jl-item-active',
+                width: 90
+            });
         }
     }
 }
@@ -104,6 +112,10 @@ var setActiveNav = function(){
 var changeActive = function(){
     for(var rm = 0; rm < navItems.length; rm++){
         navItems[rm].classList.remove('jl-item-active');
+        anime({
+            targets: navItems[rm],
+            width: 20
+        });
     }
 
     setActiveNav();
@@ -112,6 +124,11 @@ var changeActive = function(){
 // Actions
 
 totalSlide.innerHTML = counterFormatter(sliderTotalItems);
+
+anime({
+    targets: '.jl-item-active',
+    width: 90
+});
 
 nextItem.addEventListener('click', function () {
     nextSlideAnim();
